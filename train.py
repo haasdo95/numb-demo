@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/Users/dwd/go/src/github.com/user/numb-workspace/numb')
+sys.path.append('/Users/dwd/go/src/github.com/user/numb')
 
 import torch
 from torch import optim
@@ -17,7 +17,7 @@ dummy_targets = Variable(torch.rand((1000, 10)))
 
 # set parameters!
 learning_rate = 0.001
-epoch = 5
+epoch = 10
 batch_size = 20
 
 # Register parameters
