@@ -16,8 +16,8 @@ dummy_input = torch.unsqueeze(dummy_inputs[0], dim=0)
 dummy_targets = Variable(torch.rand((1000, 10)))
 
 # set parameters!
-learning_rate = 0.001
-epoch = 2
+learning_rate = 0.1
+epoch = 5
 batch_size = 20
 
 # Register parameters
