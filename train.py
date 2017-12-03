@@ -18,7 +18,7 @@ dummy_targets = Variable(torch.rand((1000, 10)))
 # set parameters!
 learning_rate = 0.01
 epoch = 2
-batch_size = 20 # becomes twenty
+batch_size = 10 # becomes ten
 
 # Register parameters
 numb_param({
