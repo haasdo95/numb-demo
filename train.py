@@ -6,7 +6,7 @@ from torch import optim
 from torch import nn
 from torch.autograd import Variable
 
-from pyhooks.hooks import numb_graph, numb_param, numb_state_dict
+from pyhooks.hooks import numb_graph, numb_param, numb_state_dict, numb_queue
 
 from lenet import LeNet
 model = LeNet()
@@ -17,8 +17,8 @@ dummy_targets = Variable(torch.rand((1000, 10)))
 
 # set parameters!
 learning_rate = 0.1
-epoch = 1
-batch_size = 10 # becomes ten
+epoch = 2
+batch_size = 100 # becomes ten
 
 # Register parameters
 numb_param({
@@ -26,6 +26,9 @@ numb_param({
     "epoch": epoch,
     "batch_size": batch_size
 })
+
+# Register queue
+numb_queue(globals()) # it basically overrides variables in global scope
 
 def make_batch(in_data, targets, batch_size):
     for start in range(0, in_data.size()[0], batch_size):

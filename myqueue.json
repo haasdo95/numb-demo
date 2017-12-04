@@ -1,0 +1,21 @@
+{
+	"queue": [
+        {
+            "learning_rate": 0.01,
+            "epoch": 5,
+            "batch_size": 20
+        },
+        {
+            "learning_rate": 0.1,
+            "epoch": 10,
+            "batch_size": 50
+        },
+        {
+            "learning_rate": 0.05,
+            "epoch": 20,
+            "batch_size": 100
+        }
+    ],
+	"start": 0,
+	"end": 3
+}
