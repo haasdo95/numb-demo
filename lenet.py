@@ -14,8 +14,8 @@ class LeNet(nn.Module):
     def __init__(self):
         super(LeNet, self).__init__()
         self.conv1 = nn.Conv2d(3, 6, 5)
-        self.fc1   = nn.Linear(1176, 120)
-        self.fc3   = nn.Linear(120, 10)
+        self.fc1   = nn.Linear(1176, 240)
+        self.fc3   = nn.Linear(240, 10)
 
     def forward(self, x):
         out = F.relu(self.conv1(x))
