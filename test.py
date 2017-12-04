@@ -8,6 +8,6 @@ from lenet import LeNet
 model = LeNet() # chaaaaange!
 
 numb_test_result({
-    "accuracy": 1,
+    "accuracy": 2,
     "note": "trying out"
 })
