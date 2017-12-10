@@ -1,0 +1,72 @@
+
+		<!DOCTYPE html>
+		<html lang="en">
+			<head>
+				<title>report</title>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+			</head>
+			<body>
+				<h2>Source Code</h2>
+				<pre class="prettyprint">
+					<code class="language-python">
+						<br/>class LeNet(nn.Module):
+    @numb_model(dummy_input)
+    def __init__(self):
+        super(LeNet, self).__init__()
+        self.conv1 = nn.Conv2d(3, 6, 5)
+        self.fc1   = nn.Linear(1176, 120)
+        self.fc3   = nn.Linear(120, 10)
+
+    def forward(self, x):
+        out = F.relu(self.conv1(x))
+        out = F.max_pool2d(out, 2)
+        out = out.view(out.size(0), -1)
+        out = F.relu(self.fc1(out))
+        out = self.fc3(out)
+        return out
+
+					</code>
+				</pre>
+				<h2>Hyper-parameters</h2>
+				<table>
+					<tr>
+						
+							<th>batch_size</th>
+						
+							<th>epoch</th>
+						
+							<th>learning_rate</th>
+						
+					</tr>
+					<tr>
+						
+							<td>20</td>
+						
+							<td>5</td>
+						
+							<td>0.01</td>
+						
+					</tr>
+				</table>
+				<h2>Test Results</h2>
+				<table>
+					<tr>
+						
+							<th>accuracy</th>
+						
+							<th>note</th>
+						
+					</tr>
+					<tr>
+						
+							<td>100</td>
+						
+							<td>trying out</td>
+						
+					</tr>
+				</table>
+			</body>
+		</html>
+		
